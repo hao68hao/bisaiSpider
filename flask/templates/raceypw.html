@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table>
+    <thead>
+        <tr>
+            <th data-sort-order="default" class="default" align="center" bgcolor="#FFA07A">比赛名称</th>
+            <th data-sort-order="default" class="default" align="center" bgcolor="#FFA07A">比赛时间</th>
+            <th data-sort-order="default" class="default" align="center" bgcolor="#FFA07A">报名开始时间</th>
+            <th data-sort-order="default" class="default" align="center" bgcolor="#FFA07A">报名结束时间</th>
+            <th data-sort-order="default" class="default" align="center" bgcolor="#FFA07A">比赛信息</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            {% for conntt in ypw %}
+        <tr>
+            <td height="30">{{conntt.raceName}}</td>
+            <td>{{conntt.raceTime}}</td>
+            <td>{{conntt.beginBM}}</td>
+            <td>{{conntt.endBM}}</td>
+            <td align="right">{{conntt.raceNote}}</td>
+        </tr>
+            {% endfor %}
+        </tr>
+    </tbody>
+
+</table>
+
+{% endblock %}

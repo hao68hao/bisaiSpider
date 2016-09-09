@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table>
+    <thead>
+        <tr>
+            <th data-sort-order="default" class="default">RACENAME</th>
+            <th data-sort-order="default" class="default">RACETIME</th>
+            <th data-sort-order="default" class="default">RACEBEGIN</th>
+            <th data-sort-order="default" class="default">RACEEND</th>
+            <th data-sort-order="default" class="default">RACENOTE</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            {% for conntt in ypw %}
+        <tr>
+            <td>{{conntt.raceName}}</td>
+            <td>{{conntt.raceTime}}</td>
+            <td>{{conntt.beginBM}}</td>
+            <td>{{conntt.endBM}}</td>
+            <td>{{conntt.raceNote}}</td>
+        </tr>
+            {% endfor %}
+        </tr>
+    </tbody>
+
+</table>
+
+{% endblock %}

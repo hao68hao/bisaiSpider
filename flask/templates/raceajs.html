@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table>
+    <thead>
+        <tr>
+            <th data-sort-order="default" class="default" align="center" bgcolor="#FFA07A">比赛名称</th>
+            <th data-sort-order="default" class="default" align="center" bgcolor="#FFA07A">比赛地点</th>
+            <th data-sort-order="default" class="default" align="center" bgcolor="#FFA07A">比赛时间</th>
+            <th data-sort-order="default" class="default" align="center" bgcolor="#FFA07A">比赛信息</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            {% for conntt in ajs %}
+        <tr>
+            <td align="left" height="30">{{conntt.raceName}}</td>
+            <td align="left">{{conntt.raceADD}}</td>
+            <td align="left">{{conntt.raceTime}}</td>
+            <td align="left">{{conntt.raceNote}}</td>
+        </tr>
+            {% endfor %}
+        </tr>
+    </tbody>
+
+</table>
+
+{% endblock %}

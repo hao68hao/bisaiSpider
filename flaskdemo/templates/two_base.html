@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>This is two page!</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th data-sort-order="default" class="default">1</th>
+            <th data-sort-order="default" class="default">2</th>
+            <th data-sort-order="default" class="default">3</th>
+            <th data-sort-order="default" class="default">41</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            {% for conntt in users %}
+            <td>{{conntt.user_id}}<br></td>
+            <td>{{conntt.user_name}}<br></td>
+            <td>{{conntt.user_id}}<br></td>
+            <td>{{conntt.user_name}}<br></td>
+            {% endfor %}
+        </tr>
+    </tbody>
+
+</table>
+
+{% for user in users %}
+{{user.user_id}}---{{user.user_name}}<br>
+{% endfor %}
+
+{% endblock %}
